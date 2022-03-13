@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <View
+        android:id="@+id/top_bar"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/user_avatar"
+        android:layout_marginBottom="-16dp"
+        android:background="?colorPrimary"/>
+
+    <ImageView
+        android:id="@+id/user_avatar"
+        android:layout_width="46dp"
+        android:layout_height="46dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:importantForAccessibility="no"/>
+
+    <TextView
+        android:id="@+id/user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toEndOf="@id/user_avatar"
+        app:layout_constraintTop_toTopOf="@id/user_avatar"
+        app:layout_constraintBottom_toBottomOf="@id/user_avatar"
+        android:layout_marginStart="20dp"
+        android:textColor="?colorOnPrimary"
+        android:textSize="24sp"
+        android:lines="1"
+        tools:text="User Name"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_type_passenger"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/top_bar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:background="@drawable/button_outline">
+
+        <TextView
+            android:id="@+id/button_type_passenger_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/icon_next_user"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="?colorPrimaryVariant"
+            android:textSize="22sp"
+            android:text="@string/user_type_passenger"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/icon_next_user"
+            app:layout_constraintTop_toBottomOf="@id/button_type_passenger_title"
+            android:layout_marginTop="8dp"
+            android:textColor="?colorPrimaryVariant"
+            android:textSize="18sp"
+            android:text="@string/user_type_passenger_desc"/>
+
+        <ImageView
+            android:id="@+id/icon_next_user"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_arrow_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:importantForAccessibility="no"
+            app:tint="?colorPrimaryVariant" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_type_driver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/button_type_passenger"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:clickable="true"
+        android:background="@drawable/button_outline">
+
+        <TextView
+            android:id="@+id/button_type_driver_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/icon_next_driver"
+            app:layout_constraintTop_toTopOf="parent"
+            android:textColor="?colorPrimaryVariant"
+            android:textSize="22sp"
+            android:text="@string/user_type_driver"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/icon_next_driver"
+            app:layout_constraintTop_toBottomOf="@id/button_type_driver_title"
+            android:layout_marginTop="8dp"
+            android:textColor="?colorPrimaryVariant"
+            android:textSize="18sp"
+            android:text="@string/user_type_driver_desc"/>
+
+        <ImageView
+            android:id="@+id/icon_next_driver"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:src="@drawable/ic_arrow_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:importantForAccessibility="no"
+            app:tint="?colorPrimaryVariant" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

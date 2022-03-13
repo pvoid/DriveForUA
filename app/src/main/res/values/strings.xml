@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">DriveForUA</string>
+    <string name="login_fragment_decr">Copy which explains why we need to login through Facebook</string>
+    <string name="user_type_passenger">I am going to Sweden</string>
+    <string name="user_type_passenger_desc">and have someone there</string>
+    <string name="user_type_driver">I am driver</string>
+    <string name="user_type_driver_desc">and get someone who goes to Sweden</string>
+</resources>
